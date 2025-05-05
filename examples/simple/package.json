@@ -1,0 +1,29 @@
+{
+  "name": "simple-agent",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "NODE_OPTIONS='--no-warnings' ts-node -r tsconfig-paths/register ./index.ts",
+    "dev": "nodemon --exec 'ts-node -r tsconfig-paths/register' ./index.ts",
+    "lint": "eslint -c .eslintrc.json *.ts",
+    "lint:fix": "eslint -c .eslintrc.json *.ts --fix",
+    "format": "prettier --write \"**/*.{ts,js,cjs,json,md}\"",
+    "format:check": "prettier -c .prettierrc --check \"**/*.{ts,js,cjs,json,md}\""
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.51",
+    "@langchain/langgraph": "^0.2.67",
+    "@langchain/openai": "^0.5.10",
+    "@ton-agent/core": "workspace:*",
+    "@ton-agent/langchain": "workspace:*",
+    "@ton/core": "^0.60.1",
+    "@ton/crypto": "^3.3.0",
+    "@types/dotenv": "^8.2.3",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.0"
+  }
+}

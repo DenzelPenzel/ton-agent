@@ -17,6 +17,7 @@ coverage
 
 # Turbo
 .turbo
+.turbo/
 
 # Vercel
 .vercel
@@ -36,3 +37,20 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+
+dist
+node_modules
+.env
+
+# VSCode
+.vscode
+
+.DS_Store
+
+.husky
+.rollup.*/
+.rollup/
+tsconfig.tsbuildinfo
+
+.idea

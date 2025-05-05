@@ -1,5 +1,5 @@
 {
-  "name": "agent007",
+  "name": "ton-agent",
   "private": true,
   "scripts": {
     "build": "turbo run build",
