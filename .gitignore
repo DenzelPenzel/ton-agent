@@ -54,3 +54,4 @@ node_modules
 tsconfig.tsbuildinfo
 
 .idea
+.vscode
