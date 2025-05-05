@@ -1,83 +1,84 @@
-# Turborepo starter
+# TON Agent
 
-This Turborepo starter is maintained by the Turborepo core team.
+A TypeScript library for building autonomous agents on the TON blockchain.
 
-## Using this example
+## Overview
 
-Run the following command:
+TON Agent is a modular framework that enables the creation of AI-powered agents capable of interacting with the TON blockchain. Built with TypeScript in a monorepo structure, it provides a flexible and extensible architecture for developing blockchain agents.
 
-```sh
-npx create-turbo@latest
-```
+## Project Structure
 
-## What's inside?
+This project is organized as a monorepo using pnpm workspaces:
 
-This Turborepo includes the following packages/apps:
+### Packages
 
-### Apps and Packages
+- `@ton-agent/core`: Core package containing wallet providers, action providers, and the base agent implementation
+- `@ton-agent/langchain`: Integration with LangChain for AI capabilities
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### Examples
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- `examples/simple`: A demonstration application showing TON Agent usage with production-ready code practices
 
-### Utilities
+## Key Features
 
-This Turborepo has some additional tools already setup for you:
+- **Wallet Management**: Secure wallet data storage and provider system
+- **Action System**: Extensible action providers for blockchain interactions
+- **AI Integration**: LangChain integration for intelligent agent behavior
+- **TypeScript**: Full TypeScript support with proper typing
+- **Error Handling**: Robust error handling with graceful recovery
+- **Configuration Management**: Structured configuration system
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Getting Started
 
-### Build
+### Prerequisites
 
-To build all apps and packages, run the following command:
+- Node.js 18 or higher
+- pnpm 9.0.0 or higher
 
-```
-cd my-turborepo
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/ton-agent.git
+cd ton-agent
+
+# Install dependencies
+pnpm install
+
+# Build all packages
 pnpm build
 ```
 
-### Develop
+### Configuration
 
-To develop all apps and packages, run the following command:
+Copy the example environment file and update it with your settings:
 
+```bash
+cp .env.example .env
 ```
-cd my-turborepo
+
+### Development
+
+To develop all packages simultaneously:
+
+```bash
 pnpm dev
 ```
 
-### Remote Caching
+To check types across all packages:
 
-> [!TIP] Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```bash
+pnpm check-types
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## Example Usage
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+See the `examples/simple` directory for a complete example of how to use TON Agent.
 
-```
-npx turbo link
-```
+## License
 
-## Useful Links
+[Add your license information here]
 
-Learn more about the power of Turborepo:
+## Contributing
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+[Add contribution guidelines here]
